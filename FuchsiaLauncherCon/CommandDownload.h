@@ -20,11 +20,14 @@ namespace CommandDownload {
                         MultiByteToWideChar(CP_ACP, 0, usedLink.c_str(), -1, link, 4096);
                         std::string fileNameString = gameInput + typeInput + ".zip";
                         debug("Will save as: " + fileNameString, fakeUseTime);
-                        HRESULT result = URLDownloadToFile(NULL, link, L"riretrimdev.zip", 0, NULL);
+                        wchar_t* fileName = new wchar_t[4096];
+                        MultiByteToWideChar(CP_ACP, 0, fileNameString.c_str(), -1, fileName, 4096);
+                        HRESULT result = URLDownloadToFile(NULL, link, fileName, 0, NULL);
                         if (result == 0) {
                             debug("Downloaded!", fakeUseTime);
                         }
                         delete[] link;
+                        delete[] fileName;
                     }
                     else {
                         debug("Version " + versionInput + " not found for Game " + gameInput + " in " + typeInput, fakeUseTime);

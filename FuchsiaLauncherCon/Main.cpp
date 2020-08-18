@@ -20,14 +20,14 @@ using namespace std;
 void Start();
 bool GetCommandAction(const string& currentCommandIn);
 void TimeCounter();
-void CreateArguments(string currentCommandIn, vector<std::string>& arguments, string &placeholderString);
-
+void CreateArguments(string currentCommandIn, vector<std::string>& arguments);
+void PrintVersion();
 FHXTIME::Time fakeUseTime;
+double version = 0.1;
 
 int main() {
     std::thread counter(TimeCounter);
-	double version = 0.1;
-	cout << "=--------------------------------=\n" << " Fuchsia Launcher Console V. " << version << "\n" << "=--------------------------------=" << endl;
+    PrintVersion();
     debug("Getting Data...", fakeUseTime);
     if (FHXV::UpdateData()) {
         debug("Got Data!\n", fakeUseTime);
@@ -57,8 +57,7 @@ void Start() {
 bool GetCommandAction(const string& currentCommandIn) {
     string fakePrefix = "--";
     vector<std::string> arguments{};
-    string placeholderString = "";
-    CreateArguments(currentCommandIn, arguments, placeholderString);
+    CreateArguments(currentCommandIn, arguments);
     if (currentCommandIn.find(fakePrefix) == string::npos) {
         fakePrefix = "";
         debug("Used " + currentCommandIn + " Command without Prefix", fakeUseTime);
@@ -144,7 +143,8 @@ void TimeCounter() {
     TimeCounter();
 }
 
-void CreateArguments(string currentCommandIn, vector<std::string>& arguments, string& placeholderString) {
+void CreateArguments(string currentCommandIn, vector<std::string>& arguments) {
+    string placeholderString = "";
     currentCommandIn.push_back(0x20);
     for (char const& ch : currentCommandIn) {
         if (ch != 0x20) {
@@ -157,4 +157,17 @@ void CreateArguments(string currentCommandIn, vector<std::string>& arguments, st
             }
         }
     }
+}
+
+void PrintVersion() {
+    string line = "=-";
+    //string title = "Fuchsia Launcher Console V. " + to_string(version);
+    string title = "Fuchsia Launcher Console V. 0.1";
+
+    for (int i = 0; i < title.length(); i++)
+    {
+        line.push_back('-');
+    }
+    line.push_back('-=');
+    cout << line + "\n" << " " + title + " \n" << line << endl;
 }

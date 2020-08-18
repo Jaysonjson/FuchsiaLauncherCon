@@ -6,7 +6,7 @@ typedef bool(__stdcall* f_available)();
 
 int loadDLL()
 {
-    HINSTANCE hGetProcIDDLL = LoadLibrary(TEXT("vs0001.dll"));
+    HINSTANCE hGetProcIDDLL = LoadLibrary(TEXT("flux.dll"));
 
     if (!hGetProcIDDLL) {
         std::cout << "could not load the dynamic library" << std::endl;

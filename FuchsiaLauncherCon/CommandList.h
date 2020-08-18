@@ -9,5 +9,5 @@ void DisplayCommands(FHXTIME::Time fakeUseTime) {
         "\n --discord -fuchsia : Shows and Opens a Discord Invitation for the Fuchsia Server"
         "\n --discord -graviarts : Shows and Opens a Discord Invitation for the Graviarts Server"
         "\n --debug Enables Debug-Mode for this Session"
-        "\n --exit : Exists the Application", fakeUseTime);
+        "\n --exit : Exists the Application", fakeUseTime, false);
 }
