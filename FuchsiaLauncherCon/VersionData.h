@@ -53,7 +53,8 @@ namespace FHXV {
             return false;
         }
 
-            std::string GetData() {
-                return json;
-            }
+            
+        std::string GetData() {
+            return json;
+        }
 }

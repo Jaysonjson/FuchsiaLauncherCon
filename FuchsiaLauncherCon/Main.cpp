@@ -23,7 +23,6 @@ void TimeCounter();
 void CreateArguments(string currentCommandIn, vector<std::string>& arguments);
 void PrintVersion();
 FHXTIME::Time fakeUseTime;
-double version = 0.1;
 
 int main() {
     std::thread counter(TimeCounter);
