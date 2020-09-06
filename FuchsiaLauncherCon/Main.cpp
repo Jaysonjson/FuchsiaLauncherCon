@@ -161,12 +161,12 @@ void CreateArguments(string currentCommandIn, vector<std::string>& arguments) {
 void PrintVersion() {
     string line = "=-";
     //string title = "Fuchsia Launcher Console V. " + to_string(version);
-    string title = "Fuchsia Launcher Console V. 0.1";
+    string title = "Fuchsia Launcher Console V. 0.2";
 
-    for (int i = 0; i < title.length(); i++)
+    for (int i = 1; i < title.length(); i++)
     {
         line.push_back('-');
     }
-    line.push_back('-=');
+    line.push_back('=');
     cout << line + "\n" << " " + title + " \n" << line << endl;
 }
