@@ -26,6 +26,9 @@ namespace CommandDownload {
                         if (result == 0) {
                             debug("Downloaded!", fakeUseTime);
                         }
+                        else {
+                            debug("Couldn't download! >> " + result, fakeUseTime);
+                        }
                         delete[] link;
                         delete[] fileName;
                     }

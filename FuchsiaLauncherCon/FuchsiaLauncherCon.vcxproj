@@ -154,6 +154,8 @@
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandDiscord.h" />
     <ClInclude Include="CommandDownload.h" />
+    <ClInclude Include="CommandDownloadLegacy.h" />
+    <ClInclude Include="CommandLegacy.h" />
     <ClInclude Include="CommandLibs.h" />
     <ClInclude Include="CommandList.h" />
     <ClInclude Include="CommandOpenLegacy.h" />

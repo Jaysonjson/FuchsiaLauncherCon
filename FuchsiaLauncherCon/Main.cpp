@@ -25,6 +25,7 @@ void PrintVersion();
 FHXTIME::Time fakeUseTime;
 
 int main() {
+    CreateDirectory(L"data", NULL);
     std::thread counter(TimeCounter);
     PrintVersion();
     debug("Getting Data...", fakeUseTime);
@@ -89,6 +90,16 @@ bool GetCommandAction(const string& currentCommandIn) {
         if (currentCommandIn == fakePrefix + "debug") {
             FHXS::debug = true;
             cout << "Enabled" << endl;
+            return true;
+        }
+
+        if (currentCommandIn == fakePrefix + "legacy -download") {
+            CommandDownloadLegacy::DoCommand(fakeUseTime);
+            return true;
+        }
+
+        if (currentCommandIn == fakePrefix + "legacy") {
+            CommandLegacy::DoCommand();
             return true;
         }
 

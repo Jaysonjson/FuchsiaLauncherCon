@@ -71,6 +71,12 @@
     <ClInclude Include="CommandDiscord.h">
       <Filter>Header Files\Commands</Filter>
     </ClInclude>
+    <ClInclude Include="CommandDownloadLegacy.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLegacy.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">

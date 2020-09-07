@@ -5,3 +5,5 @@
 #include "CommandUpdateVersion.h"
 #include "CommandDownload.h"
 #include "CommandDiscord.h"
+#include "CommandDownloadLegacy.h"
+#include "CommandLegacy.h"
