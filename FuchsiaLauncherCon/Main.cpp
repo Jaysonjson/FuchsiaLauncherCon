@@ -7,6 +7,7 @@
 #include <chrono>
 #include <thread>
 #include <vector>
+#include <fstream>
 #include "Time.h"
 #include "Console.h"
 #include "VersionData.h"

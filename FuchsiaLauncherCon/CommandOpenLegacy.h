@@ -3,12 +3,12 @@
 #include <fstream>
 namespace CommandOpenLegacy {
 	void DoCommand() {
-		ifstream ifile("legacy/FuchsiaLauncher.jar");
+		std::ifstream ifile("legacy/FuchsiaLauncher.jar");
 		if (ifile) {
 			system("java -jar legacy/FuchsiaLauncher.jar");
 		}
 		else {
-			cout << "Couldn't find Legacy Launcher!" << endl;
+			std::cout << "Couldn't find Legacy Launcher!" << std::endl;
 		}
 	}
 };
