@@ -7,3 +7,4 @@
 #include "CommandDiscord.h"
 #include "CommandDownloadLegacy.h"
 #include "CommandLegacy.h"
+#include "CommandWriteVersion.h"

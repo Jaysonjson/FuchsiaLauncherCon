@@ -2,6 +2,7 @@
 void DisplayCommands(FHXTIME::Time fakeUseTime) {
     debug("Available Commands:"
         "\n --versions -json : Shows current Versions Json"
+        "\n --versions -write : Writes data to Json"
         "\n --update -version : Updates Version Jsons"
         "\n --help : Shows Commands"
         "\n --libs : Shows used Libraries"

@@ -1,7 +1,14 @@
 #pragma once
 namespace CommandDownload {
     using namespace std;
+    void DoTask(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments);
+
     void DoCommand(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments) {
+        std::thread commandThread(DoTask, fakeUseTime, arguments);
+        commandThread.detach();
+    }
+
+    void DoTask(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments) {
         if (arguments.size() >= 3) {
             std::string gameInput = arguments[1];
             std::string typeInput = arguments[2];

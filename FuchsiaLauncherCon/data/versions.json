@@ -1,0 +1,86 @@
+{
+  "legacy": "https://www.dropbox.com/s/n8io7pk6eb8d1ft/fuchsialauncher.jar?dl=1",
+  "builds": {
+    "windows": {
+      "games": {
+        "riretrim": {
+          "dev": {
+            "0.0.0.0.7": {
+              "url": "https://www.dropbox.com/s/8xrf3oxt1nhee9e/riretrim_00007.zip?dl=1",
+              "name": "Riretrim.exe",
+              "changelog": "Update 0.0.0.0.7:\n- Basic Modding\n- Updated Shop\n- New Generation / Loading / Saving System\n- Autosave\n- Bug fixes\n- UI Changes\n- New Enemy: Egg\n- Updated Italian Language\n- Updated Norwegian Language\n- Minimap now shows correct Planet Amount\n- Minimap now shows correct Moon Amount\n- Fixed Planet Type Distance (No more icy planets near sun ;))\n- New Map Generation Loading Bars\n- Titlescreen Updated\n- New Ship: Drill\n- New ShipWreck: Drill\n- Added Energy\n- Adjusted Ship Lightning"
+            },
+            "0.0.0.0.6": {
+              "url": "https://www.dropbox.com/s/awn2ohuc6dlzbhk/riretrim_00006_win.zip?dl=1",
+              "name": "Riretrim.exe",
+              "changelog": ""
+            },
+            "0.0.0.0.5": {
+              "url": "https://www.dropbox.com/s/nmo19xsiollr0jz/riretrim_000005_win.zip?dl=1",
+              "name": "Riretrim.exe",
+              "changelog": ""
+            },
+            "0.0.0.0.4": {
+              "url": "https://www.dropbox.com/s/rhd4j7v8n7gtp39/riretrim00004.zip?dl=1",
+              "name": "Riretrim.exe",
+              "changelog": ""
+            },
+            "0.0.0.0.3": {
+              "url": "https://www.dropbox.com/s/v00klgarfdshs29/riretrim00003.zip?dl=1",
+              "name": "Riretrim.exe",
+              "changelog": ""
+            },
+            "0.0.0.0.2": {
+              "url": "https://www.dropbox.com/s/zquzxw54on04hk5/riretrim00002.zip?dl=1",
+              "name": "Riretrim.exe",
+              "changelog": ""
+            },
+            "0.0.0.0.1": {
+              "url": "https://www.dropbox.com/s/9j6ows5dnc3glg7/riretrim00001.zip?dl=1",
+              "name": "Riretrim.exe",
+              "changelog": ""
+            },
+            "0.0.0.0.0": {
+              "url": "https://www.dropbox.com/s/78qv60wjmv5ivpu/Riretrim.zip?dl=1",
+              "name": "Riretrim.exe",
+              "changelog": ""
+            } 
+          },
+          "beta": {},
+          "alpha": {}
+        },
+       "fluxxed": {
+          "dev": {},
+          "beta": {},
+          "alpha": {}
+        },
+        "starspeed18": {
+          "dev": {
+            "last_jayson_build": {
+              "url": "https://www.dropbox.com/s/u4b0bg5amknc4hd/starspeed18.zip?dl=1",
+              "name": "StarSpeed18.exe",
+              "changelog": ""
+            } 
+          },
+          "beta": {},
+          "alpha": {}
+        }
+      }
+    },
+    "macos": {
+      "games": {
+        "riretrim": {
+          "dev": {
+            "0.0.0.0.0": {
+              "url": "https://www.dropbox.com/s/n7lftg87g8mmti8/riretrimmacos.zip?dl=1",
+              "name": "RireTrimBuild.app",
+              "changelog": ""
+            }
+          },
+          "beta": {},
+          "alpha": {}
+        }
+      }
+    }
+  }
+}

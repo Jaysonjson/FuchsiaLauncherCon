@@ -1,20 +1,4 @@
-#include <iostream>
-#include <map>
-#include <string>
-#include <json/json.h>
-#include <curl/curl.h>
-#include <zip.h>
-#include <chrono>
-#include <thread>
-#include <vector>
-#include <fstream>
-#include "Time.h"
-#include "Console.h"
-#include "VersionData.h"
-#include "Settings.h"
-#include "CommandList.h"
-#include "ProgressBar.h"
-#include "Commands.h"
+#include "Imports.h"
 #pragma comment(lib,"URLMon.lib")
 using namespace std;
 
@@ -37,7 +21,8 @@ int main() {
         debug("Problem at getting Data...\n", fakeUseTime);
         //return 2;
     }
-    DisplayCommands(fakeUseTime);
+    //DisplayCommands(fakeUseTime);
+    debug("Type \"help\" for list of commands", fakeUseTime);
     Start();
 	return 0;
 }
@@ -73,8 +58,14 @@ bool GetCommandAction(const string& currentCommandIn) {
             CommandDownload::DoCommand(fakeUseTime, arguments);
             return true;
         }
+
         if (currentCommandIn == fakePrefix + "update -version") {
             CommandUpdateVersion::DoCommand(fakeUseTime);
+            return true;
+        }
+
+        if (currentCommandIn == fakePrefix + "versions -write") {
+            CommandWriteVersion::DoCommand(fakeUseTime);
             return true;
         }
 

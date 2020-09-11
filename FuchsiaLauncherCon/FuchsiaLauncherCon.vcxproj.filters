@@ -26,9 +26,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CommandOpenLegacy.h">
-      <Filter>Header Files\Commands</Filter>
-    </ClInclude>
     <ClInclude Include="CommandPrintData.h">
       <Filter>Header Files\Commands</Filter>
     </ClInclude>
@@ -75,6 +72,12 @@
       <Filter>Header Files\Commands</Filter>
     </ClInclude>
     <ClInclude Include="CommandLegacy.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Imports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandWriteVersion.h">
       <Filter>Header Files\Commands</Filter>
     </ClInclude>
   </ItemGroup>
