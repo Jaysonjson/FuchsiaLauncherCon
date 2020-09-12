@@ -6,7 +6,7 @@ namespace CommandDownloadLegacy {
         debug("Downloading...", fakeUseTime);
         HRESULT result = URLDownloadToFile(NULL, link, L"FuchsiaLauncherLegacy.jar", 0, NULL);
         if (result == 0) {
-            debug("Downloaded!", fakeUseTime);
+            debug("Downloaded! [" + std::to_string(GetFileSize("FuchsiaLauncherLegacy.jar")) + " Bytes]", fakeUseTime);
         }
         else {
             debug("Couldn't download! >> " + result, fakeUseTime);
