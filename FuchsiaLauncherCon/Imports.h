@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+#include "Streams.h"
 #include <map>
 #include <string>
 #include <json/json.h>
@@ -8,7 +8,7 @@
 #include <chrono>
 #include <thread>
 #include <vector>
-#include <fstream>
+#include "Util.h"
 #include "Time.h"
 #include "Console.h"
 #include "VersionData.h"

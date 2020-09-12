@@ -31,7 +31,7 @@ namespace CommandDownload {
                         MultiByteToWideChar(CP_ACP, 0, fileNameString.c_str(), -1, fileName, 4096);
                         HRESULT result = URLDownloadToFile(NULL, link, fileName, 0, NULL);
                         if (result == 0) {
-                            debug("Downloaded!", fakeUseTime);
+                            debug("Downloaded! [" + std::to_string(GetFileSize(fileNameString)) + " Bytes]", fakeUseTime);
                         }
                         else {
                             debug("Couldn't download! >> " + result, fakeUseTime);
