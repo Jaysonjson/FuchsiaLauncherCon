@@ -4,8 +4,7 @@ namespace CommandDownload {
     void DoTask(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments);
 
     void DoCommand(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments) {
-        std::thread commandThread(DoTask, fakeUseTime, arguments);
-        commandThread.detach();
+        DoTask(fakeUseTime, arguments);
     }
 
     void DoTask(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments) {
