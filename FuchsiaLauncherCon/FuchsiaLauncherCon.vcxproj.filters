@@ -30,6 +30,9 @@
     <ClCompile Include="Progressbar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WinRegistry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommandPrintData.h">
@@ -90,6 +93,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Streams.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WinRegistry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

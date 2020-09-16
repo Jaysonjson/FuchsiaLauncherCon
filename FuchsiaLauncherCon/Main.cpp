@@ -1,4 +1,5 @@
 #include "Imports.h"
+#include <Windows.h>
 #pragma comment(lib,"URLMon.lib")
 using namespace std;
 
@@ -30,7 +31,6 @@ int main() {
 void Start() {
     string currentCommand;
     getline(cin, currentCommand);
-    debug("Using Command: " + currentCommand, fakeUseTime);
     if (GetCommandAction(currentCommand)) {
         Start();
     }
@@ -44,6 +44,10 @@ bool GetCommandAction(const string& currentCommandIn) {
     string fakePrefix = "--";
     vector<std::string> arguments{};
     CreateArguments(currentCommandIn, arguments);
+    if (currentCommandIn == "") {
+        return true;
+    }
+    debug("Using Command: " + currentCommandIn, fakeUseTime);
     if (currentCommandIn.find(fakePrefix) == string::npos) {
         fakePrefix = "";
         debug("Used " + currentCommandIn + " Command without Prefix", fakeUseTime);
