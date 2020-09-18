@@ -1,19 +1,19 @@
 #pragma once
 namespace CommandDownload {
     using namespace std;
-    void DoTask(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments);
+    void DoTask(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments, VersionsData& vsData);
 
-    void DoCommand(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments) {
-        DoTask(fakeUseTime, arguments);
+    void DoCommand(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments, VersionsData& vsData) {
+        DoTask(fakeUseTime, arguments, vsData);
     }
 
-    void DoTask(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments) {
+    void DoTask(FHXTIME::Time fakeUseTime, std::vector<std::string> arguments, VersionsData& vsData) {
         if (arguments.size() >= 3) {
             std::string gameInput = arguments[1];
             std::string typeInput = arguments[2];
             std::string versionInput = arguments[3];
-            if (FHXV::windows_games[gameInput]) {
-                Json::Value windows_game = FHXV::windows_games[gameInput];
+            if (vsData.windows_games[gameInput]) {
+                Json::Value windows_game = vsData.windows_games[gameInput];
                 if (windows_game[typeInput]) {
                     Json::Value windows_game_type = windows_game[typeInput];
                     if (windows_game_type[versionInput]) {

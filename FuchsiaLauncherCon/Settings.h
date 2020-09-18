@@ -1,4 +1,4 @@
 #pragma once
 namespace FHXS {
-	bool debug = false;
+	//bool debug = false;
 }

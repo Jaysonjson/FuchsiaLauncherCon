@@ -1,8 +1,8 @@
 #pragma once
 namespace CommandUpdateVersion {
-	void DoCommand(FHXTIME::Time fakeUseTime) {
+	void DoCommand(FHXTIME::Time fakeUseTime, VersionsData& vsData) {
         debug("Updating Data...", fakeUseTime);
-        if (FHXV::UpdateData()) {
+        if (UpdateVersionData(vsData)) {
             debug("Updated Data!", fakeUseTime);
         }
         else {

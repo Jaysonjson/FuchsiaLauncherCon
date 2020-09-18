@@ -9,13 +9,14 @@ void TimeCounter();
 void CreateArguments(string currentCommandIn, vector<std::string>& arguments);
 void PrintVersion();
 FHXTIME::Time fakeUseTime;
+VersionsData vsData;
 
 int main() {
     CreateDirectory(L"data", NULL);
     std::thread counter(TimeCounter);
     PrintVersion();
     debug("Getting Data...", fakeUseTime);
-    if (FHXV::UpdateData()) {
+    if (UpdateVersionData(vsData)) {
         debug("Got Data!\n", fakeUseTime);
     }
     else { 
@@ -54,22 +55,22 @@ bool GetCommandAction(const string& currentCommandIn) {
     }
     if (currentCommandIn.find(string::npos)) {
         if (currentCommandIn == fakePrefix + "versions -json") {
-            CommandPrintData::DoCommand();
+            CommandPrintData::DoCommand(vsData);
             return true;
         }
 
         if (currentCommandIn.find(fakePrefix + "download") != string::npos) {
-            CommandDownload::DoCommand(fakeUseTime, arguments);
+            CommandDownload::DoCommand(fakeUseTime, arguments, vsData);
             return true;
         }
 
         if (currentCommandIn == fakePrefix + "update -version") {
-            CommandUpdateVersion::DoCommand(fakeUseTime);
+            CommandUpdateVersion::DoCommand(fakeUseTime, vsData);
             return true;
         }
 
         if (currentCommandIn == fakePrefix + "versions -write") {
-            CommandWriteVersion::DoCommand(fakeUseTime);
+            CommandWriteVersion::DoCommand(fakeUseTime, vsData);
             return true;
         }
 
@@ -84,13 +85,13 @@ bool GetCommandAction(const string& currentCommandIn) {
         }
 
         if (currentCommandIn == fakePrefix + "debug") {
-            FHXS::debug = true;
+            //FHXS::debug = true;
             cout << "Enabled" << endl;
             return true;
         }
 
         if (currentCommandIn == fakePrefix + "legacy -download") {
-            CommandDownloadLegacy::DoCommand(fakeUseTime);
+            CommandDownloadLegacy::DoCommand(fakeUseTime, vsData);
             return true;
         }
 

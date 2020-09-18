@@ -2,9 +2,9 @@
 #include <curl/curl.h>
 #include "VersionData.h"
 namespace CommandPrintData {
-	void DoCommand() {
-		if (FHXV::json != "") {
-			std::cout << FHXV::json;
+	void DoCommand(VersionsData& vsData) {
+		if (vsData.json != "") {
+			std::cout << vsData.json;
 		}
 		else {
 			std::cout << "json seems empty..." << std::endl;

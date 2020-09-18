@@ -1,8 +1,8 @@
 #pragma once
 namespace CommandDownloadLegacy {
-	void DoCommand(FHXTIME::Time fakeUseTime) {
+	void DoCommand(FHXTIME::Time fakeUseTime, VersionsData& vsData) {
         wchar_t* link = new wchar_t[4096];
-        MultiByteToWideChar(CP_ACP, 0, FHXV::root["legacy"].asCString(), -1, link, 4096);
+        MultiByteToWideChar(CP_ACP, 0, vsData.root["legacy"].asCString(), -1, link, 4096);
         debug("Downloading...", fakeUseTime);
         HRESULT result = URLDownloadToFile(NULL, link, L"FuchsiaLauncherLegacy.jar", 0, NULL);
         if (result == 0) {
