@@ -15,7 +15,10 @@ namespace CommandDiscord {
 				system(std::string("start " + url).c_str());
 			}
 			else {
-				debug("Unknown Argument", fakeUseTime);
+				debug("Unknown Argument!; Available Arguments:" 
+					"\n--discord -fuchsia"
+					"\n--discord -graviarts"
+					, fakeUseTime);
 			}
 		}
 		else {
